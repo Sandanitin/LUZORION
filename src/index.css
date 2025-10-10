@@ -30,6 +30,15 @@ body {
   html {
     font-family: 'Inter', system-ui, sans-serif;
   }
+  /* Ensure media is responsive on mobile and laptops */
+  img, video, svg, canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  iframe {
+    max-width: 100%;
+  }
 }
 
 @layer components {

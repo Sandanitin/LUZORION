@@ -77,14 +77,14 @@ export default function Services() {
     <section id="services" className="py-28 bg-gradient-to-b from-[color:var(--primary-light)] to-white">
       <div className="container mx-auto px-6 lg:px-10 max-w-7xl">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-24">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-[color:var(--primary)] mb-8 leading-tight">
+        <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-24">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-[color:var(--primary)] mb-6 md:mb-8 leading-tight">
             Our Services
           </h1>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-[color:var(--primary)] mb-8 leading-tight">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-[color:var(--primary)] mb-6 md:mb-8 leading-tight">
             Comprehensive Healthcare Solutions
           </h2>
-          <p className="text-2xl text-[color:var(--primary)]/80 font-medium leading-relaxed">
+          <p className="text-lg sm:text-xl text-[color:var(--primary)]/80 font-medium leading-relaxed">
             Streamline your practice with our end-to-end medical support services
           </p>
         </div>
@@ -105,15 +105,15 @@ export default function Services() {
                 onClick={() => toggleCard(index)}
               >
                 <div className="flex items-start justify-between">
-                  <div className="flex items-start space-x-8">
-                    <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service.accent} flex items-center justify-center text-white shadow-md`}>
+                  <div className="flex items-start space-x-6 md:space-x-8">
+                    <div className={`w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-gradient-to-br ${service.accent} flex items-center justify-center text-white shadow-md`}>
                       {service.icon}
                     </div>
                     <div>
-                      <h3 className="text-3xl font-bold text-slate-800 mb-3 group-hover:text-[color:var(--primary)] transition-colors">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2 sm:mb-3 group-hover:text-[color:var(--primary)] transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-lg text-slate-600 leading-relaxed">
+                      <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                         {service.description}
                       </p>
                     </div>
@@ -129,35 +129,35 @@ export default function Services() {
 
               {/* Expanded Details */}
               <div 
-                className={`px-10 overflow-hidden transition-all duration-700 ease-in-out ${
+                className={`px-6 sm:px-10 overflow-hidden transition-all duration-700 ease-in-out ${
                   expandedCard === index ? 'max-h-[1200px] pb-10' : 'max-h-0'
                 }`}
               >
                 <div className="pt-6 border-t border-slate-100">
-                  <p className="text-slate-700 mb-8 leading-relaxed text-lg">
+                  <p className="text-slate-700 mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg">
                     {service.details}
                   </p>
-                  <ul className="space-y-5 mb-10">
+                  <ul className="space-y-4 sm:space-y-5 mb-8 sm:mb-10">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-start">
                         <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${service.accent} text-white flex items-center justify-center mr-4 shadow-sm`}>
                           <FaCheck className="w-4 h-4" />
                         </div>
-                        <span className="text-lg text-slate-700">{feature}</span>
+                        <span className="text-base sm:text-lg text-slate-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="flex flex-col sm:flex-row gap-5">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
                     <Link 
                       to={`/contact?service=${encodeURIComponent(service.title)}`}
-                      className={`px-10 py-5 bg-gradient-to-r ${service.accent} text-white rounded-xl font-semibold hover:opacity-90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center text-lg`}
+                      className={`px-6 py-4 sm:px-10 sm:py-5 bg-gradient-to-r ${service.accent} text-white rounded-xl font-semibold hover:opacity-90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center text-base sm:text-lg`}
                     >
                       Get Started
                       <FaArrowRight className="ml-3 w-5 h-5" />
                     </Link>
                     <Link 
                       to={service.path}
-                      className="px-10 py-5 border-2 border-slate-200 text-slate-700 rounded-xl font-semibold hover:bg-slate-50 transition-colors text-lg"
+                      className="px-6 py-4 sm:px-10 sm:py-5 border-2 border-slate-200 text-slate-700 rounded-xl font-semibold hover:bg-slate-50 transition-colors text-base sm:text-lg"
                     >
                       Learn More
                     </Link>
@@ -169,16 +169,16 @@ export default function Services() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-24 text-center bg-gradient-to-r from-[color:var(--primary-light)] to-[color:var(--primary)]/10 rounded-3xl p-16 shadow-md">
-          <p className="text-3xl font-bold text-[color:var(--primary)] mb-6">
+        <div className="mt-16 sm:mt-24 text-center bg-gradient-to-r from-[color:var(--primary-light)] to-[color:var(--primary)]/10 rounded-3xl p-8 sm:p-16 shadow-md">
+          <p className="text-2xl sm:text-3xl font-bold text-[color:var(--primary)] mb-4 sm:mb-6">
             Need a custom solution? Our team is ready to help.
           </p>
-          <p className="text-xl text-[color:var(--primary)]/80 mb-10 max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-[color:var(--primary)]/80 mb-6 sm:mb-10 max-w-2xl mx-auto">
             Let's discuss how we can tailor our services to meet your specific needs and challenges.
           </p>
           <Link 
             to="/contact"
-            className="px-10 py-5 bg-white border-2 border-[color:var(--primary)] text-[color:var(--primary)] rounded-xl font-semibold hover:bg-[color:var(--primary-light)]/30 transition-all shadow-sm hover:shadow-lg flex items-center mx-auto text-lg"
+            className="px-6 py-4 sm:px-10 sm:py-5 bg-white border-2 border-[color:var(--primary)] text-[color:var(--primary)] rounded-xl font-semibold hover:bg-[color:var(--primary-light)]/30 transition-all shadow-sm hover:shadow-lg flex items-center mx-auto text-base sm:text-lg"
           >
             Contact Our Experts
             <FaArrowRight className="ml-3 w-5 h-5" />
