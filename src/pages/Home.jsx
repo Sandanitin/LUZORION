@@ -31,15 +31,7 @@ export default function Home() {
                 Accurate scribing, coding, and billing services that free clinicians to focus on patients — delivered securely and on time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[color:var(--primary)] to-[color:var(--accent)] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
-                >
-                  Get a Quote
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </Link>
+                {/* Removed 'Get a Quote' CTA per request */}
                 <Link 
                   to="/services" 
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 font-semibold rounded-xl border-2 border-slate-200 hover:border-[color:var(--primary)] hover:text-[color:var(--primary)] transition-all duration-200"

@@ -32,9 +32,7 @@ export default function Header() {
             <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
           </nav>
 
-          <div className="hidden md:flex">
-            <Link to="/contact" className="btn-primary bg-[color:var(--primary)] hover:bg-[color:var(--primary-hover)] focus:ring-[color:var(--accent)]">Get a Quote</Link>
-          </div>
+          {/* Desktop CTA removed per request */}
 
           <button className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-700 hover:bg-slate-100" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(o => !o)}>
             <span className="sr-only">Open main menu</span>
@@ -57,7 +55,6 @@ export default function Header() {
             </div>
             <NavLink to="/resources" className={navLinkClass} onClick={() => setOpen(false)}>Resources</NavLink>
             <NavLink to="/contact" className={navLinkClass} onClick={() => setOpen(false)}>Contact</NavLink>
-            <Link to="/contact" className="block mt-2 btn-primary w-full text-center bg-[color:var(--primary)] hover:bg-[color:var(--primary-hover)]" onClick={() => setOpen(false)}>Get a Quote</Link>
           </div>
         </div>
       )}
