@@ -39,18 +39,7 @@ export default function Resources() {
                   ))}
                 </div>
               </div>
-              <div className="mt-6 grid grid-cols-3 gap-4 max-w-md">
-                {[
-                  ['15+','Years'],
-                  ['98%','Satisfaction'],
-                  ['250+','Deployments']
-                ].map((s, i) => (
-                  <div key={i} className="text-center p-4 rounded-xl bg-white ring-1 ring-slate-200">
-                    <div className="text-2xl font-extrabold text-[color:var(--primary)]">{s[0]}</div>
-                    <div className="text-xs uppercase tracking-wide text-slate-500">{s[1]}</div>
-                  </div>
-                ))}
-              </div>
+            
             </div>
             <div className="lg:col-span-5">
               <div className="relative">
@@ -106,9 +95,9 @@ export default function Resources() {
               <li>Training catalog and schedules published</li>
               <li>Cutover plan, command‑center staffing, escalation paths</li>
             </ol>
-            <a href="#" className="inline-flex items-center mt-4 text-[color:var(--primary)] font-semibold">Download as PDF
+            {/* <a href="#" className="inline-flex items-center mt-4 text-[color:var(--primary)] font-semibold">Download as PDF
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M12 12v9m0 0l-3-3m3 3l3-3M4 12V5a2 2 0 012-2h3m7 0h3a2 2 0 012 2v7"/></svg>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
