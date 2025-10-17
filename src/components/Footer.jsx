@@ -100,7 +100,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} LUZORION. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} LUZORION. All rights reserved. <span className="inline-block ml-2">Developed with <span aria-hidden="true">❤️</span> by <a href="https://www.vikrin.com/" target="_blank" rel="noopener noreferrer" className="text-[color:var(--primary)] hover:underline">Vikrin</a></span></p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-400 hover:text-[color:var(--primary)] text-sm transition-colors duration-200">Privacy Policy</a>
             <a href="#" className="text-gray-400 hover:text-[color:var(--primary)] text-sm transition-colors duration-200">Terms of Service</a>
