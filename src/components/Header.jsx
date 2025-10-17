@@ -11,8 +11,11 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <Link to="/" className="flex items-center gap-2" aria-label="Home">
-              <img src="/images/logo.png" alt="LUZORION logo" className="h-8 w-8" loading="lazy" />
-              <span className="font-semibold text-[color:var(--primary)]">LUZORION</span>
+              <img src="/images/logo.png" alt="LUZORION logo" className="h-10 w-10 md:h-12 md:w-12" loading="lazy" />
+              <div className="leading-tight">
+                <span className="font-semibold text-[color:var(--primary)] text-lg md:text-xl block">LUZORION</span>
+                <span className="block text-[10px] md:text-xs text-slate-500 tracking-wide">TIP — Trust In Precision</span>
+              </div>
             </Link>
           </div>
 

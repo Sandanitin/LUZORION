@@ -11,8 +11,8 @@ export default function About() {
       <section className="relative bg-gradient-to-br from-[color:var(--primary)] to-[color:var(--accent)] text-white overflow-hidden py-20">
         <div className="section relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
-            <p className="text-xl text-white/90 leading-relaxed">
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-6">About Us</h1>
+            <p className="text-2xl text-white/90 leading-relaxed">
               LUZORION brings together experienced clinical scribes, certified coders, and billing specialists to support physicians and care teams.
             </p>
           </div>
@@ -61,6 +61,24 @@ export default function About() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold text-[color:var(--primary)] mb-6">What Sets Us Apart</h2>
             <p className="text-xl text-[color:var(--primary)]/80">We're committed to delivering exceptional service with a focus on quality and security.</p>
+          </div>
+          {/* Leadership / Who We Are */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <h3 className="text-2xl md:text-3xl font-bold text-[color:var(--primary)] mb-6 text-center">Who We Are</h3>
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <li className="p-6 rounded-xl border border-gray-200 bg-white">
+                <p className="font-semibold text-[color:var(--primary)]">Thammi Babu Chattu CPC, CCS</p>
+                <p className="text-slate-700">CEO and Founder</p>
+              </li>
+              <li className="p-6 rounded-xl border border-gray-200 bg-white">
+                <p className="font-semibold text-[color:var(--primary)]">Anil Thippireddy CPC</p>
+                <p className="text-slate-700">Co-founder and Coding Manager</p>
+              </li>
+              <li className="p-6 rounded-xl border border-gray-200 bg-white">
+                <p className="font-semibold text-[color:var(--primary)]">Burlakunta Kiran Kumar</p>
+                <p className="text-slate-700">Director Of Client Services</p>
+              </li>
+            </ul>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">

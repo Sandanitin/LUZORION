@@ -3,7 +3,7 @@ import React from 'react';
 const ContactInfo = () => {
   return (
     <div className="lg:pl-12 lg:border-l border-gray-200">
-      <h2 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
       
       <div className="space-y-8">
         <div className="flex">
@@ -16,9 +16,9 @@ const ContactInfo = () => {
             </div>
           </div>
           <div className="ml-4">
-            <h3 className="text-lg font-medium text-gray-900">Our Office</h3>
-            <p className="mt-1 text-gray-600">123 Healthcare Way, Suite 100</p>
-            <p className="text-gray-600">City, ST 00000</p>
+            <h3 className="text-lg font-medium text-gray-900">Our Offices</h3>
+            <p className="mt-1 text-gray-600">India: TGIIC Layout Hyderabad 500081</p>
+            <p className="text-gray-600">USA: Fort Wayne, Indiana, Zipcode: 46835</p>
           </div>
         </div>
 
