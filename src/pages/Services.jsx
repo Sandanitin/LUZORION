@@ -75,6 +75,8 @@ export default function Services() {
 
   return (
     <section id="services" className="py-28 bg-gradient-to-b from-[color:var(--primary-light)] to-white">
+      {/* Page SEO */}
+      <SEO title="Services — LUZORION" description="Medical scribing, coding, billing, and analytics services designed to streamline your practice and improve patient care." />
       <div className="container mx-auto px-6 lg:px-10 max-w-7xl">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-24">
