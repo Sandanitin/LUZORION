@@ -81,7 +81,7 @@ const Contact = () => {
   // Function to save to Google Sheets
   const saveToGoogleSheet = async (data) => {
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbwo_j2uaRvE0eZ_wVodjDKfPY5MNA1Dtst0JtqVQ8y2vzGsfmEkzz1Y21KIJ4vXooDf/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwo_j2uaRvE0eZ_wVodjDKfPY5MNA1Dtst0JtqVQ8y2vzGsfmEkzz1Y21KIJ4vXooDf/https://script.google.com/macros/s/AKfycbw5MPZQ7chqbiIKaLnQf5O6j_PuyakW4kKtsjOFs9cbehLc_4DbSilFt8rE-JiAN3AF/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -128,10 +128,10 @@ const Contact = () => {
 
       // Send email using EmailJS
       const emailPromise = emailjs.send(
-        'service_j1it8n7',
-        'template_uvnmczx',
+        'service_48mvqs9',
+        'template_s85u808',
         templateParams,
-        'h7cnMVE1nufu98OC7'
+        'ZD_JLHs4OkMV0eIJ0'
       );
 
       // Save to Google Sheets (run in parallel)
