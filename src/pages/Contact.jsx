@@ -20,7 +20,7 @@ const Contact = () => {
 
   // Initialize EmailJS with your public key
   useEffect(() => {
-    emailjs.init("h7cnMVE1nufu98OC7");
+    emailjs.init("ZD_JLHs4OkMV0eIJ0");
   }, []);
 
   const validateForm = () => {
