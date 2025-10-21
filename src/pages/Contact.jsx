@@ -81,7 +81,7 @@ const Contact = () => {
   // Function to save to Google Sheets
   const saveToGoogleSheet = async (data) => {
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbwo_j2uaRvE0eZ_wVodjDKfPY5MNA1Dtst0JtqVQ8y2vzGsfmEkzz1Y21KIJ4vXooDf/https://script.google.com/macros/s/AKfycbw5MPZQ7chqbiIKaLnQf5O6j_PuyakW4kKtsjOFs9cbehLc_4DbSilFt8rE-JiAN3AF/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbxDnwv2-jsK66MKj6vwO_5k7eJrGOFrz6Df1exmS4erU2nPQIxP8KX8trYjM1vINANE/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
