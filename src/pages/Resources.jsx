@@ -13,10 +13,46 @@ export default function Resources() {
     { title: 'Optimization', body: 'Optimize your system to fit your needs. Maximize efficiency and ensure you are getting the most out of your EHR.' }
   ]
 
+  const faqItems = [
+    {
+      question: 'Do you support multiple EHR vendors?',
+      answer: 'Yes. Our team has experience with leading EHRs including Epic Systems, Cerner (Oracle Health), MEDITECH, Allscripts (Veradigm), eClinicalWorks, NextGen, Athenahealth, Greenway Health, Kareo, Practice Fusion, and AdvancedMD. We adapt to your vendor stack and governance.'
+    },
+    {
+      question: 'How do you measure success?',
+      answer: 'We baseline KPIs before go‑live and track chart closure time, coding accuracy, claims denials, and throughput post go‑live. Our focus is on measurable outcomes including reduced chart closure time, improved coding accuracy, lower denials, and increased provider productivity.'
+    },
+    {
+      question: 'Can you train providers remotely?',
+      answer: 'Absolutely. We deliver role‑based, remote or on‑site training with super‑user enablement. Our scalable training programs are designed for both on‑site and remote delivery, including simulation & mock go-lives to prepare your team for a seamless transition.'
+    },
+    {
+      question: 'What is your experience with EHR implementations?',
+      answer: 'LUZORION has been providing EMR implementation and training support since 2023 with experience in both short and long‑term project plans. Our healthcare-centric team has experience across hospitals, clinics, and ambulatory care settings with both clinical and revenue-cycle workflows.'
+    },
+    {
+      question: 'What training programs do you offer?',
+      answer: 'We offer system-specific training for major EHR platforms, role-based learning for clinicians and staff, simulation & mock go-lives, super-user development, and post-training support with ongoing refresher sessions and feedback loops to maintain high adoption rates.'
+    },
+    {
+      question: 'How do you handle data migration and integration?',
+      answer: 'We ensure seamless interoperability between EHRs, billing, and ancillary systems (ADT, HL7, FHIR, lab, pharmacy, imaging). Our team handles data migration scope and validation, working with realistic data to ensure accuracy and compliance.'
+    },
+    {
+      question: 'What are your engagement models?',
+      answer: 'We offer flexible engagement models — from short-term implementations to managed EHR optimization services. We partner with you to ensure a seamless transition from strategy through activation and optimization.'
+    },
+    {
+      question: 'How do you ensure compliance with healthcare regulations?',
+      answer: 'Our implementations consistently align with HIPAA, HITECH, and CMS regulatory requirements. We conduct security role mapping and HIPAA risk assessments as part of our comprehensive implementation checklist.'
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       <SEO title="Resources — LUZORION" description="Guides and best practices for EMR/EHR implementation, training, and optimization." />
 
+      {/* Hero */}
       {/* Hero */}
       <section className="relative overflow-hidden py-16 sm:py-24">
         <div className="absolute inset-0 -z-10">
@@ -73,8 +109,29 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* Quick Wins & Checklist */}
+
+      
+
+      {/* Supported Platforms */}
       <section className="py-12 bg-[color:var(--neutral)]">
+        <div className="section">
+          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">Supported EHR/EMR Platforms</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {[
+              'Epic Systems', 'Cerner (Oracle Health)', 'MEDITECH', 'Allscripts (Veradigm)', 
+              'eClinicalWorks', 'NextGen', 'Athenahealth', 'Greenway Health', 
+              'Kareo', 'Practice Fusion', 'AdvancedMD'
+            ].map((platform, index) => (
+              <div key={index} className="p-4 rounded-xl bg-white border border-slate-200 text-center text-sm font-medium text-slate-700 hover:shadow-md transition-shadow">
+                {platform}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Wins & Checklist */}
+      <section className="py-12 bg-white">
         <div className="section grid lg:grid-cols-2 gap-8">
           <div>
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Quick wins for a successful EHR go‑live</h2>
@@ -98,191 +155,63 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* EMR/EHR Services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Implementation Services */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
+      {/* Training & Development */}
+      <section className="py-12 bg-[color:var(--neutral)]">
+        <div className="section">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Training & Development</h2>
+            <p className="text-slate-700 max-w-3xl mx-auto">
+              LUZORION's Training & Development Division equips healthcare professionals with the skills and confidence needed to use their EHR systems efficiently and accurately. Whether your team is preparing for a new system implementation, version upgrade, or optimization phase, we offer structured training that ensures long-term success.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'System-Specific Training',
+                description: 'Tailored sessions for Epic, Cerner, MEDITECH, Allscripts, Athenahealth, eClinicalWorks, and other leading systems.'
+              },
+              {
+                title: 'Role-Based Learning',
+                description: 'Dedicated learning paths for clinicians, nurses, medical coders, front-desk staff, and administrators.'
+              },
+              {
+                title: 'Simulation & Mock Go-Lives',
+                description: 'Real-world scenario training to prepare your team for a seamless transition on go-live day.'
+              },
+              {
+                title: 'Super-User Development',
+                description: 'Identifying and empowering key team members to act as internal EHR champions.'
+              },
+              {
+                title: 'Post-Training Support',
+                description: 'Ongoing refresher sessions, video guides, and feedback loops to maintain high adoption rates.'
+              },
+              {
+                title: 'Benefits of Training',
+                description: 'Faster EHR adoption, improved documentation accuracy, reduced downtime, and stronger compliance.'
+              }
+            ].map((item, index) => (
+              <div key={index} className="p-6 rounded-2xl bg-white border border-slate-200 hover:shadow-lg transition-all">
+                <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-700">{item.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">EMR Implementation</h3>
-              <p className="text-gray-600 mb-6">
-                End-to-end electronic medical records system implementation with customized clinical workflows.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  System selection & configuration
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Clinical workflow design
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Data migration & conversion
-                </li>
-              </ul>
-            </div>
-
-            {/* Integration Services */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">System Integration</h3>
-              <p className="text-gray-600 mb-6">
-                Seamless integration with existing healthcare systems and third-party applications.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                  HL7 & FHIR integration
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                  Lab & pharmacy systems
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                  Practice management systems
-                </li>
-              </ul>
-            </div>
-
-            {/* Training & Support */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Training & Support</h3>
-              <p className="text-gray-600 mb-6">
-                Comprehensive training programs and ongoing support for clinical and administrative staff.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                  Clinical staff training
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                  Physician super-users
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                  24/7 technical support
-                </li>
-              </ul>
-            </div>
-
-            {/* Customization */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Customization</h3>
-              <p className="text-gray-600 mb-6">
-                Tailored EMR solutions to match your specialty-specific requirements and workflows.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                  Specialty templates
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                  Custom reports & dashboards
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                  Workflow automation
-                </li>
-              </ul>
-            </div>
-
-            {/* Compliance & Security */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Security</h3>
-              <p className="text-gray-600 mb-6">
-                Ensure HIPAA compliance and robust data security for your patient health information.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                  HIPAA compliance audit
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                  Data encryption
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                  Access controls & audit trails
-                </li>
-              </ul>
-            </div>
-
-            {/* Optimization */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">System Optimization</h3>
-              <p className="text-gray-600 mb-6">
-                Continuous improvement and optimization of your EMR system for peak performance.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
-                  Performance monitoring
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
-                  Workflow efficiency analysis
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
-                  System upgrades & patches
-                </li>
-              </ul>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-12 bg-[color:var(--neutral)]">
+      <section className="py-12 bg-white">
         <div className="section max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">FAQ</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Frequently Asked Questions</h2>
           <div className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
-            {[
-              ['Do you support multiple EHR vendors?', 'Yes. Our team has experience with leading EHRs and ancillary systems. We adapt to your vendor stack and governance.'],
-              ['How do you measure success?', 'We baseline KPIs before go‑live and track chart closure time, coding accuracy, claims denials, and throughput post go‑live.'],
-              ['Can you train providers remotely?', 'Absolutely. We deliver role‑based, remote or on‑site training with super‑user enablement.']
-            ].map((qa, i) => (
+            {faqItems.map((faq, i) => (
               <details key={i} className="group p-6">
                 <summary className="flex cursor-pointer items-center justify-between text-slate-900 font-semibold">
-                  {qa[0]}
+                  {faq.question}
                   <svg className="ml-4 h-5 w-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/></svg>
                 </summary>
-                <p className="mt-3 text-slate-700">{qa[1]}</p>
+                <p className="mt-3 text-slate-700">{faq.answer}</p>
               </details>
             ))}
           </div>

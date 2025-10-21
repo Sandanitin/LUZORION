@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import SEO from '@/components/SEO';
 import ContactInfo from '@/components/ContactInfo';
 import { FiSend, FiLoader, FiCheck, FiAlertCircle } from 'react-icons/fi';
@@ -16,6 +17,11 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ type: '', message: '' });
   const [errors, setErrors] = useState({});
+
+  // Initialize EmailJS with your public key
+  useEffect(() => {
+    emailjs.init("h7cnMVE1nufu98OC7");
+  }, []);
 
   const validateForm = () => {
     const newErrors = {};
@@ -72,6 +78,31 @@ const Contact = () => {
     }
   };
 
+  // Function to save to Google Sheets
+  const saveToGoogleSheet = async (data) => {
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwo_j2uaRvE0eZ_wVodjDKfPY5MNA1Dtst0JtqVQ8y2vzGsfmEkzz1Y21KIJ4vXooDf/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          ...data,
+          timestamp: new Date().toISOString(),
+        }).toString(),
+      });
+
+      // Since we're using no-cors mode, we can't read the response
+      // But we assume it's successful if no network error occurs
+      console.log('Data saved to Google Sheet');
+      return true;
+    } catch (error) {
+      console.error('Error saving to Google Sheet:', error);
+      return false;
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -84,16 +115,37 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      console.log('Form data being sent:', formData);
+      // EmailJS template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        to_name: 'LUZORION Team',
+        reply_to: formData.email
+      };
 
-      await fetch('https://script.google.com/macros/s/AKfycbwo_j2uaRvE0eZ_wVodjDKfPY5MNA1Dtst0JtqVQ8y2vzGsfmEkzz1Y21KIJ4vXooDf/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams(formData).toString(),
-      });
+      // Send email using EmailJS
+      const emailPromise = emailjs.send(
+        'service_j1it8n7',
+        'template_uvnmczx',
+        templateParams,
+        'h7cnMVE1nufu98OC7'
+      );
+
+      // Save to Google Sheets (run in parallel)
+      const sheetPromise = saveToGoogleSheet(formData);
+
+      // Wait for both operations (but don't fail if sheet save fails)
+      const [emailResult] = await Promise.all([
+        emailPromise,
+        sheetPromise.catch(error => {
+          console.log('Google Sheet save failed but continuing:', error);
+        })
+      ]);
+
+      console.log('Email sent successfully:', emailResult);
 
       // Show success message
       setStatus({
@@ -111,13 +163,45 @@ const Contact = () => {
       });
 
     } catch (err) {
-      console.error("Error details:", err);
+      console.error("EmailJS Error details:", err);
 
-      // Fallback success message
-      setStatus({
-        type: 'success',
-        message: "Your message has been received! We'll get back to you soon."
-      });
+      // If email fails, try to at least save to Google Sheets
+      try {
+        await saveToGoogleSheet(formData);
+        console.log('Data saved to Google Sheet as fallback');
+        
+        // Show success message even if email failed but sheet saved
+        setStatus({
+          type: 'success',
+          message: "Your message has been received! We'll get back to you soon."
+        });
+
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: 'Medical Scribing',
+          message: ''
+        });
+
+      } catch (sheetError) {
+        console.error('Both email and sheet save failed:', sheetError);
+
+        // Show appropriate error message
+        let errorMessage = "Sorry, there was a problem sending your message. Please try again later.";
+        
+        if (err.text) {
+          errorMessage = err.text;
+        } else if (err.message) {
+          errorMessage = err.message;
+        }
+
+        setStatus({
+          type: 'error',
+          message: errorMessage
+        });
+      }
     } finally {
       setLoading(false);
     }
@@ -149,7 +233,7 @@ const Contact = () => {
           <div className="lg:pr-12 max-w-lg">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
 
-            {/* Status Banner (Fixed - single message) */}
+            {/* Status Banner */}
             {status.message && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
@@ -250,9 +334,11 @@ const Contact = () => {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8FA63A] focus:border-transparent"
+                  className={`w-full px-4 py-3 border ${errors.message ? 'border-red-500' : 'border-gray-300'
+                    } rounded-md focus:ring-2 focus:ring-[#8FA63A] focus:border-transparent`}
                   placeholder="How can we help you?"
                 ></textarea>
+                {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
               </div>
 
               <div className="pt-2">
@@ -262,8 +348,17 @@ const Contact = () => {
                   className={`w-full flex justify-center items-center px-6 py-3 text-base font-medium rounded-md text-white bg-[#8FA63A] hover:bg-[#7a8f33] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8FA63A] transition duration-200 shadow-md hover:shadow-lg ${loading ? 'opacity-50 cursor-not-allowed' : ''
                     }`}
                 >
-                  {loading ? 'Sending...' : 'Send Message'}
-                  <FiSend className="ml-2 w-5 h-5" />
+                  {loading ? (
+                    <>
+                      <FiLoader className="animate-spin mr-2 w-5 h-5" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <FiSend className="ml-2 w-5 h-5" />
+                    </>
+                  )}
                 </button>
               </div>
             </form>
