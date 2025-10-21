@@ -31,7 +31,7 @@ export default function Resources() {
               </h1>
               <div className="p-6 sm:p-8 rounded-2xl ring-1 ring-slate-200 bg-white/80 backdrop-blur">
                 <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
-                  <span className="font-semibold text-[color:var(--primary)]">LUZORION</span> has been providing EMR implementation and training support since <span className="font-semibold">2009</span> with experience in both short and long‑term project plans. Our experienced healthcare IT professionals have built careers on successful EHR deployments across diverse care settings. We provide end‑to‑end planning and implementation services to guide you through strategy, planning, workflow assessment, build, activation, and post go‑live monitoring. Our experience translates to lessons learned and practical solutions. We collaborate closely, learn your needs, and integrate our product knowledge to achieve your expected results.
+                  <span className="font-semibold text-[color:var(--primary)]">LUZORION</span> has been providing EMR implementation and training support since <span className="font-semibold">2023</span> with experience in both short and long‑term project plans. Our experienced healthcare IT professionals have built careers on successful EHR deployments across diverse care settings. We provide end‑to‑end planning and implementation services to guide you through strategy, planning, workflow assessment, build, activation, and post go‑live monitoring. Our experience translates to lessons learned and practical solutions. We collaborate closely, learn your needs, and integrate our product knowledge to achieve your expected results.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {['Strategy', 'Workflow', 'Build', 'Training', 'Go‑Live', 'Optimization'].map((chip) => (
@@ -65,7 +65,6 @@ export default function Resources() {
               <article key={i} className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-slate-900">{p.title}</h3>
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[color:var(--primary)]/10 text-[color:var(--primary)] text-sm font-semibold">{i + 1}</span>
                 </div>
                 <p className="text-slate-700 leading-relaxed">{p.body}</p>
               </article>
@@ -95,36 +94,174 @@ export default function Resources() {
               <li>Training catalog and schedules published</li>
               <li>Cutover plan, command‑center staffing, escalation paths</li>
             </ol>
-            {/* <a href="#" className="inline-flex items-center mt-4 text-[color:var(--primary)] font-semibold">Download as PDF
-              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M12 12v9m0 0l-3-3m3 3l3-3M4 12V5a2 2 0 012-2h3m7 0h3a2 2 0 012 2v7"/></svg>
-            </a> */}
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="section max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">Typical 8–12 week timeline</h2>
-          <div className="relative">
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[color:var(--primary)] to-[color:var(--accent)]"></div>
-            <div className="space-y-8">
-              {[
-                ['Weeks 1–2', 'Discovery, workflow assessment, and technical inventory'],
-                ['Weeks 3–5', 'Build, integrations, data migration mapping'],
-                ['Weeks 6–7', 'Testing, UAT, training content finalization'],
-                ['Weeks 8–9', 'Training delivery, cutover rehearsals'],
-                ['Weeks 10–12', 'Go‑live, hypercare, KPI monitoring']
-              ].map((row, i) => (
-                <div key={i} className={`md:grid md:grid-cols-2 md:items-center gap-6 ${i%2===1 ? 'md:text-right' : ''}`}>
-                  <div className={`${i%2===1 ? 'md:order-2' : ''}`}>
-                    <div className="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-[color:var(--primary)]/10 text-[color:var(--primary)] text-sm font-semibold">{row[0]}</div>
-                  </div>
-                  <div className={`${i%2===1 ? 'md:order-1' : ''}`}>
-                    <p className="text-slate-700">{row[1]}</p>
-                  </div>
-                </div>
-              ))}
+      {/* EMR/EHR Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Implementation Services */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">EMR Implementation</h3>
+              <p className="text-gray-600 mb-6">
+                End-to-end electronic medical records system implementation with customized clinical workflows.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  System selection & configuration
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  Clinical workflow design
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  Data migration & conversion
+                </li>
+              </ul>
+            </div>
+
+            {/* Integration Services */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">System Integration</h3>
+              <p className="text-gray-600 mb-6">
+                Seamless integration with existing healthcare systems and third-party applications.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  HL7 & FHIR integration
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  Lab & pharmacy systems
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  Practice management systems
+                </li>
+              </ul>
+            </div>
+
+            {/* Training & Support */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Training & Support</h3>
+              <p className="text-gray-600 mb-6">
+                Comprehensive training programs and ongoing support for clinical and administrative staff.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                  Clinical staff training
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                  Physician super-users
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                  24/7 technical support
+                </li>
+              </ul>
+            </div>
+
+            {/* Customization */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Customization</h3>
+              <p className="text-gray-600 mb-6">
+                Tailored EMR solutions to match your specialty-specific requirements and workflows.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                  Specialty templates
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                  Custom reports & dashboards
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                  Workflow automation
+                </li>
+              </ul>
+            </div>
+
+            {/* Compliance & Security */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Security</h3>
+              <p className="text-gray-600 mb-6">
+                Ensure HIPAA compliance and robust data security for your patient health information.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                  HIPAA compliance audit
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                  Data encryption
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                  Access controls & audit trails
+                </li>
+              </ul>
+            </div>
+
+            {/* Optimization */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">System Optimization</h3>
+              <p className="text-gray-600 mb-6">
+                Continuous improvement and optimization of your EMR system for peak performance.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
+                  Performance monitoring
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
+                  Workflow efficiency analysis
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
+                  System upgrades & patches
+                </li>
+              </ul>
             </div>
           </div>
         </div>

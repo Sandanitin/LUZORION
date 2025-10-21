@@ -14,7 +14,7 @@ export default function Header() {
               <img src="/images/logo.png" alt="LUZORION logo" className="h-10 w-10 md:h-12 md:w-12" loading="lazy" />
               <div className="leading-tight">
                 <span className="font-semibold text-[color:var(--primary)] text-lg md:text-xl block">LUZORION</span>
-                <span className="block text-[10px] md:text-xs text-slate-500 tracking-wide">TIP — Trust In Precision</span>
+                <span className="block text-[10px] md:text-xs text-slate-500 tracking-wide">Trust In Precision</span>
               </div>
             </Link>
           </div>
@@ -31,7 +31,7 @@ export default function Header() {
                 <NavLink to="/services/healthcare-data-analytics" className={({ isActive }) => `block px-4 py-2 text-sm ${isActive ? 'text-white bg-[color:var(--primary)]' : 'text-[color:var(--text)] hover:bg-slate-50'}`}>Healthcare Data Analytics</NavLink>
               </div>
             </div>
-            <NavLink to="/resources" className={navLinkClass}>Resources</NavLink>
+            <NavLink to="/EMR/EHR" className={navLinkClass}>EMR/EHR</NavLink>
             <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
           </nav>
 

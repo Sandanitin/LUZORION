@@ -18,8 +18,8 @@ export default function Home() {
           <div className="section section-y grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 text-sm font-medium text-slate-700">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                Healthcare · HIPAA Compliant
+                {/* <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div> */}
+                {/* Healthcare · HIPAA Compliant */}
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
                 Medical documentation that works for your{' '}
@@ -73,7 +73,7 @@ export default function Home() {
                   />
                   <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
                 </div>
-                <p className="text-3xl font-bold text-slate-900">250+</p>
+                <p className="text-3xl font-bold text-slate-900">100+</p>
                 <p className="text-sm text-slate-600 font-medium">Happy Clients</p>
               </div>
             </div>
