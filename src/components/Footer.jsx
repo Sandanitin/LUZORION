@@ -80,7 +80,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <p className="text-gray-300 text-sm">+1 (555) 123-4567</p>
+                <p className="text-gray-300 text-sm">+1 (317) 457-6497</p>
                 <p className="text-gray-300 text-sm">Mon-Fri, 9am-6pm EST</p>
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <p className="text-gray-300 text-sm">info@luzorion.com</p>
+                <p className="text-gray-300 text-sm">luzorionhealth@gmail.com</p>
                 <p className="text-gray-300 text-sm">We'll respond within 24 hours</p>
               </div>
             </div>
@@ -100,10 +100,10 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} LUZORION. All rights reserved. <span className="inline-block ml-2">Developed with <span aria-hidden="true">❤️</span> by <a href="https://www.vikrin.com/" target="_blank" rel="noopener noreferrer" className="text-[color:var(--primary)] hover:underline">Vikrin</a></span></p>
+          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} LUZORION. All rights reserved. <span className="inline-block ml-2">DESIGNED AND DEVELOPED BY <a href="https://www.vikrin.com/" target="_blank" rel="noopener noreferrer" className="text-[color:var(--primary)] hover:underline">Vikrin</a></span></p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-[color:var(--primary)] text-sm transition-colors duration-200">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-[color:var(--primary)] text-sm transition-colors duration-200">Terms of Service</a>
+            <Link to="/privacy-policy" className="text-gray-400 hover:text-[color:var(--primary)] text-sm transition-colors duration-200">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-gray-400 hover:text-[color:var(--primary)] text-sm transition-colors duration-200">Terms of Service</Link>
           </div>
         </div>
       </div>

@@ -10,6 +10,8 @@ import MedicalScribing from './pages/MedicalScribing';
 import MedicalCoding from './pages/MedicalCoding';
 import MedicalBilling from './pages/MedicalBilling';
 import HealthcareDataAnalytics from './pages/HealthcareDataAnalytics';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import ScrollToTop from './pages/ScrollToTop';
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/services/healthcare-data-analytics" element={<HealthcareDataAnalytics />} />
           <Route path="/EMR/EHR" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
         </Route>
       </Routes>
     </>
