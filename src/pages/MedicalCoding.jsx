@@ -6,8 +6,10 @@ export default function MedicalCoding() {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Medical Coding — LUZORION" 
-        description="Your partner in reimbursement excellence with accurate, compliant coding that drives revenue." 
+        title="Medical Coding Services — LUZORION Healthcare"
+        description="Your partner in reimbursement excellence with accurate, compliant medical coding that drives revenue. Maximize your healthcare practice's revenue with our certified coding professionals."
+        keywords="medical coding, healthcare coding, CPT coding, ICD-10 coding, medical billing coding, certified coders, AAPC, AHIMA, reimbursement optimization"
+        type="article"
       />
 
       {/* Hero Section */}

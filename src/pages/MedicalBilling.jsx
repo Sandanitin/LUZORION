@@ -6,8 +6,10 @@ export default function MedicalBilling() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <SEO 
-        title="Medical Billing — LUZORION" 
-        description="Comprehensive, accurate, and scalable Revenue Cycle Management solutions to maximize reimbursements." 
+        title="Medical Billing Services — LUZORION Healthcare"
+        description="Comprehensive, accurate, and scalable Revenue Cycle Management solutions to maximize healthcare reimbursements. Our medical billing services optimize your practice's financial health."
+        keywords="medical billing, revenue cycle management, healthcare billing, medical claims processing, healthcare reimbursement, RCM services, HIPAA compliant billing"
+        type="article"
       />
 
       {/* Hero Section */}

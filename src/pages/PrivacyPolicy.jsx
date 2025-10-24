@@ -5,8 +5,10 @@ const PrivacyPolicy = () => {
   return (
     <>
       <SEO 
-        title="Privacy Policy - LUZORION"
-        description="Privacy policy for LUZORION healthcare IT services. Learn how we collect, use, and protect your personal information."
+        title="Privacy Policy - LUZORION Healthcare Services"
+        description="Privacy policy for LUZORION healthcare IT services. Learn how we collect, use, and protect your personal information. HIPAA compliant healthcare documentation."
+        keywords="privacy policy, healthcare privacy, HIPAA compliance, data protection, medical documentation privacy"
+        noindex={true}
       />
       
       <div className="bg-white py-16 sm:py-24">

@@ -6,8 +6,9 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About — LUZORION"
-        description="We help practices streamline documentation and revenue cycle with secure, reliable services."
+        title="About LUZORION — Healthcare Documentation & Medical Services"
+        description="Learn about LUZORION, a leading provider of medical scribing, coding, and billing services. LUZORION helps healthcare practices streamline documentation and revenue cycle with secure, reliable services."
+        keywords="LUZORION, healthcare documentation, medical scribing company, medical coding services, healthcare IT solutions, HIPAA compliant services, revenue cycle management"
       />
 
       {/* Hero Section */}

@@ -15,8 +15,10 @@ export default function MedicalScribing() {
   return (
     <div className="bg-white">
       <SEO 
-        title="Medical Scribing — LUZORION" 
-        description="AI-powered, HIPAA-compliant virtual medical scribing that enhances clinical documentation and workflow efficiency." 
+        title="Medical Scribing Services — LUZORION Healthcare"
+        description="AI-powered, HIPAA-compliant virtual medical scribing that enhances clinical documentation and workflow efficiency. Reduce physician burnout and improve patient care with our advanced scribing solutions."
+        keywords="medical scribing, virtual scribing, clinical documentation, physician scribing, healthcare documentation, HIPAA compliant scribing, EHR scribing, reduce physician burnout"
+        type="article"
       />
 
       {/* Hero Section */}

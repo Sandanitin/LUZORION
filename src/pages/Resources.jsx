@@ -50,7 +50,11 @@ export default function Resources() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO title="Resources — LUZORION" description="Guides and best practices for EMR/EHR implementation, training, and optimization." />
+      <SEO 
+        title="EMR/EHR Resources — LUZORION Healthcare Solutions"
+        description="Comprehensive guides and best practices for EMR/EHR implementation, training, and optimization. Healthcare IT resources for successful EHR deployments."
+        keywords="EMR implementation, EHR training, healthcare IT resources, EHR optimization, EMR best practices, healthcare technology, EHR deployment"
+      />
 
       {/* Hero */}
       {/* Hero */}

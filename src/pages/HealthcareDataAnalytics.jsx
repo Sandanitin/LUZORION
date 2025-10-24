@@ -6,8 +6,10 @@ export default function HealthcareDataAnalytics() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <SEO 
-        title="Healthcare Data Analytics — LUZORION" 
-        description="Transform your healthcare data into actionable insights with our advanced analytics solutions." 
+        title="Healthcare Data Analytics — LUZORION Medical Solutions"
+        description="Transform your healthcare data into actionable insights with our advanced analytics solutions. Improve patient outcomes and operational efficiency with our healthcare data analytics platform."
+        keywords="healthcare analytics, medical data analytics, healthcare data insights, patient outcome analytics, operational efficiency analytics, HIPAA compliant analytics"
+        type="article"
       />
 
       {/* Hero Section */}

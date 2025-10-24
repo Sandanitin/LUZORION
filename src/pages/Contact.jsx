@@ -210,8 +210,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title="Contact Us — LUZORION"
-        description="Get in touch with our team for inquiries, support, or to schedule a consultation."
+        title="Contact LUZORION — Healthcare Documentation & Medical Services"
+        description="Get in touch with LUZORION for medical scribing, coding, and billing services. LUZORION is here to help streamline your healthcare documentation and improve patient care."
+        keywords="LUZORION, contact healthcare services, medical scribing contact, medical coding services, healthcare documentation, HIPAA compliant services"
       />
 
       {/* Hero Section */}

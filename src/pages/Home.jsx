@@ -5,7 +5,11 @@ import SEO from '@/components/SEO'
 export default function Home() {
   return (
     <>
-      <SEO title="LUZORION — Medical documentation that works for your practice." description="Accurate scribing, coding, and billing services that free clinicians to focus on patients — delivered securely and on time." />
+      <SEO 
+        title="LUZORION — Healthcare Documentation & Medical Scribing Services" 
+        description="LUZORION provides accurate medical scribing, coding, and billing services that free clinicians to focus on patients. HIPAA compliant healthcare documentation solutions for healthcare providers." 
+        keywords="LUZORION, medical scribing, medical coding, medical billing, healthcare documentation, HIPAA compliant, RCM, EHR optimization, clinical documentation, healthcare IT, healthcare services"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100">

@@ -103,7 +103,6 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">© {new Date().getFullYear()} LUZORION. All rights reserved. <span className="inline-block ml-2">DESIGNED AND DEVELOPED BY <a href="https://www.vikrin.com/" target="_blank" rel="noopener noreferrer" className="text-[color:var(--primary)] hover:underline">Vikrin</a></span></p>
           <div className="flex gap-6">
             <Link to="/privacy-policy" className="text-gray-400 hover:text-[color:var(--primary)] text-sm transition-colors duration-200">Privacy Policy</Link>
-            <Link to="/terms-of-service" className="text-gray-400 hover:text-[color:var(--primary)] text-sm transition-colors duration-200">Terms of Service</Link>
           </div>
         </div>
       </div>
