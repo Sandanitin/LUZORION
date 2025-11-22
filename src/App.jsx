@@ -6,12 +6,13 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Resources from './pages/Resources';
 import Contact from './pages/Contact';
-import MedicalScribing from './pages/MedicalScribing';
-import MedicalCoding from './pages/MedicalCoding';
-import MedicalBilling from './pages/MedicalBilling';
-import HealthcareDataAnalytics from './pages/HealthcareDataAnalytics';
+import Prescriptions from './pages/Prescriptions';
+import Immunizations from './pages/Immunizations';
+import ClinicalServices from './pages/ClinicalServices';
+import SpecialtyServices from './pages/SpecialtyServices';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ScrollToTop from './pages/ScrollToTop';
+
 function App() {
   return (
     <>
@@ -21,11 +22,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services/medical-scribing" element={<MedicalScribing />} />
-          <Route path="/services/medical-coding" element={<MedicalCoding />} />
-          <Route path="/services/medical-billing" element={<MedicalBilling />} />
-          <Route path="/services/healthcare-data-analytics" element={<HealthcareDataAnalytics />} />
-          <Route path="/EMR/EHR" element={<Resources />} />
+          <Route path="/services/prescriptions" element={<Prescriptions />} />
+          <Route path="/services/immunizations" element={<Immunizations />} />
+          <Route path="/services/clinical-services" element={<ClinicalServices />} />
+          <Route path="/services/specialty-services" element={<SpecialtyServices />} />
+          <Route path="/health-resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Route>

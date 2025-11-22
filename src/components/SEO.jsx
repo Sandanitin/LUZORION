@@ -3,51 +3,69 @@ import { Helmet } from 'react-helmet-async'
 
 // Enhanced SEO component for pages with comprehensive metadata and structured data
 export default function SEO({
-  title = 'LUZORION — Medical documentation that works for your practice.',
-  description = 'Accurate scribing, coding, and billing services that free clinicians to focus on patients — delivered securely and on time.',
+  title = 'Hillside Dhaka Pharmacy — Your Local Pharmacy in Jamaica, NY',
+  description = 'Community pharmacy serving Jamaica, NY. Fast prescriptions, free delivery, immunizations & health services. MON-SAT 10AM-7PM.',
   image = '/images/logo.png',
   url,
   type = 'website',
   noindex = false,
   keywords = '',
-  author = 'LUZORION',
+  author = 'Hillside Dhaka Pharmacy',
   publishedTime,
   modifiedTime,
   articleSection = '',
   structuredData = null
 }) {
-  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://luzorion.com'
+  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://hillsidedhakapharma.com'
   const pageUrl = url || (typeof window !== 'undefined' ? window.location.href : origin)
   const absoluteImage = image?.startsWith('http') ? image : `${origin}${image}`
 
   // Organization structured data
   const orgJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'LUZORION',
+    '@type': 'Pharmacy',
+    name: 'Hillside Dhaka Pharmacy',
     url: origin,
     logo: `${origin}/images/logo.png`,
-    sameAs: [
-      'https://www.linkedin.com/company/luzorion',
-      'https://twitter.com/luzorion'
-    ],
+    image: `${origin}/images/logo.png`,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '17014 Hillside Ave',
+      addressLocality: 'Jamaica',
+      addressRegion: 'NY',
+      postalCode: '11432',
+      addressCountry: 'US'
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '40.708',
+      longitude: '-73.795'
+    },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-317-457-6497',
+      telephone: '+1-718-526-2300',
       contactType: 'Customer Service',
-      email: 'luzorionhealth@gmail.com',
-      areaServed: 'US',
-      availableLanguage: 'en'
+      email: 'dhakapharma17014@gmail.com',
+      areaServed: 'Jamaica, NY',
+      availableLanguage: ['en', 'bn']
     },
-    description: 'LUZORION is a leading healthcare documentation company providing medical scribing, coding, and billing services.',
-    brand: 'LUZORION'
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '10:00',
+        closes: '19:00'
+      }
+    ],
+    description: 'Community pharmacy serving Jamaica, NY. Prescription filling, immunizations, health services, free delivery.',
+    priceRange: '$$'
   }
 
   // Website structured data
   const webSiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'LUZORION',
+    name: 'Hillside Dhaka Pharmacy',
     url: origin,
     potentialAction: {
       '@type': 'SearchAction',
@@ -66,11 +84,11 @@ export default function SEO({
       description: description,
       author: {
         '@type': 'Organization',
-        name: 'LUZORION'
+        name: 'Hillside Dhaka Pharmacy'
       },
       publisher: {
         '@type': 'Organization',
-        name: 'LUZORION',
+        name: 'Hillside Dhaka Pharmacy',
         logo: {
           '@type': 'ImageObject',
           url: `${origin}/images/logo.png`
@@ -89,7 +107,7 @@ export default function SEO({
         {/* Primary meta tags */}
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords || 'medical scribing, medical coding, medical billing, healthcare documentation, HIPAA compliant, RCM, EHR optimization'} />
+        <meta name="keywords" content={keywords || 'pharmacy, prescription filling, immunizations, vaccines, health services, free delivery, Jamaica NY, Bengali pharmacy, local pharmacy'} />
         <meta name="author" content={author} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
@@ -102,9 +120,9 @@ export default function SEO({
         <meta property="og:description" content={description} />
         <meta property="og:type" content={type} />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:site_name" content="LUZORION" />
+        <meta property="og:site_name" content="Hillside Dhaka Pharmacy" />
         <meta property="og:image" content={absoluteImage} />
-        <meta property="og:image:alt" content="LUZORION Healthcare Services" />
+        <meta property="og:image:alt" content="Hillside Dhaka Pharmacy - Your Local Pharmacy" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter */}
@@ -112,10 +130,10 @@ export default function SEO({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={absoluteImage} />
-        <meta name="twitter:image:alt" content="LUZORION Healthcare Services" />
+        <meta name="twitter:image:alt" content="Hillside Dhaka Pharmacy - Your Local Pharmacy" />
         
         {/* Mobile and PWA */}
-        <meta name="theme-color" content="#8FA63A" />
+        <meta name="theme-color" content="#2D8659" />
         
         {/* Structured Data */}
         <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>

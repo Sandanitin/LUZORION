@@ -11,10 +11,10 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <Link to="/" className="flex items-center gap-2" aria-label="Home">
-              <img src="/images/logo.png" alt="LUZORION logo" className="h-10 w-10 md:h-12 md:w-12" loading="lazy" />
+              <img src="/images/logo.png" alt="Hillside Dhaka Pharmacy logo" className="h-10 w-10 md:h-12 md:w-12" loading="lazy" />
               <div className="leading-tight">
-                <span className="font-semibold text-[color:var(--primary)] text-lg md:text-xl block">LUZORION</span>
-                <span className="block text-[10px] md:text-xs text-slate-500 tracking-wide">Trust In Precision</span>
+                <span className="font-bold text-[color:var(--primary)] text-base md:text-lg block tracking-wide">HILLSIDE DHAKA</span>
+                <span className="block text-xs md:text-sm text-slate-600 font-semibold tracking-widest">PHARMACY</span>
               </div>
             </Link>
           </div>
@@ -23,19 +23,17 @@ export default function Header() {
             <NavLink to="/" className={navLinkClass} end>Home</NavLink>
             <NavLink to="/about" className={navLinkClass}>About</NavLink>
             <div className="relative group">
-            <NavLink to="/services" className={navLinkClass}>Services</NavLink>
+              <NavLink to="/services" className={navLinkClass}>Services</NavLink>
               <div className="absolute left-0 mt-2 hidden group-hover:block min-w-[220px] rounded-md border border-slate-200 bg-white shadow-lg py-2 z-50">
-                <NavLink to="/services/medical-scribing" className={({ isActive }) => `block px-4 py-2 text-sm ${isActive ? 'text-white bg-[color:var(--primary)]' : 'text-[color:var(--text)] hover:bg-slate-50'}`}>Medical Scribing</NavLink>
-                <NavLink to="/services/medical-coding" className={({ isActive }) => `block px-4 py-2 text-sm ${isActive ? 'text-white bg-[color:var(--primary)]' : 'text-[color:var(--text)] hover:bg-slate-50'}`}>Medical Coding</NavLink>
-                <NavLink to="/services/medical-billing" className={({ isActive }) => `block px-4 py-2 text-sm ${isActive ? 'text-white bg-[color:var(--primary)]' : 'text-[color:var(--text)] hover:bg-slate-50'}`}>Medical Billing</NavLink>
-                <NavLink to="/services/healthcare-data-analytics" className={({ isActive }) => `block px-4 py-2 text-sm ${isActive ? 'text-white bg-[color:var(--primary)]' : 'text-[color:var(--text)] hover:bg-slate-50'}`}>Healthcare Data Analytics</NavLink>
+                <NavLink to="/services/prescriptions" className={({ isActive }) => `block px-4 py-2 text-sm ${isActive ? 'text-white bg-[color:var(--primary)]' : 'text-[color:var(--text)] hover:bg-slate-50'}`}>Prescriptions</NavLink>
+                <NavLink to="/services/immunizations" className={({ isActive }) => `block px-4 py-2 text-sm ${isActive ? 'text-white bg-[color:var(--primary)]' : 'text-[color:var(--text)] hover:bg-slate-50'}`}>Immunizations</NavLink>
+                <NavLink to="/services/clinical-services" className={({ isActive }) => `block px-4 py-2 text-sm ${isActive ? 'text-white bg-[color:var(--primary)]' : 'text-[color:var(--text)] hover:bg-slate-50'}`}>Clinical Services</NavLink>
+                <NavLink to="/services/specialty-services" className={({ isActive }) => `block px-4 py-2 text-sm ${isActive ? 'text-white bg-[color:var(--primary)]' : 'text-[color:var(--text)] hover:bg-slate-50'}`}>Specialty Services</NavLink>
               </div>
             </div>
-            <NavLink to="/EMR/EHR" className={navLinkClass}>EMR/EHR</NavLink>
+            <NavLink to="/health-resources" className={navLinkClass}>Health Tips</NavLink>
             <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
           </nav>
-
-          {/* Desktop CTA removed per request */}
 
           <button className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-700 hover:bg-slate-100" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(o => !o)}>
             <span className="sr-only">Open main menu</span>
@@ -51,12 +49,12 @@ export default function Header() {
             <NavLink to="/about" className={navLinkClass} onClick={() => setOpen(false)}>About</NavLink>
             <NavLink to="/services" className={navLinkClass} onClick={() => setOpen(false)}>Services</NavLink>
             <div className="pl-4 space-y-1">
-              <NavLink to="/services/medical-scribing" className={navLinkClass} onClick={() => setOpen(false)}>Medical Scribing</NavLink>
-              <NavLink to="/services/medical-coding" className={navLinkClass} onClick={() => setOpen(false)}>Medical Coding</NavLink>
-              <NavLink to="/services/medical-billing" className={navLinkClass} onClick={() => setOpen(false)}>Medical Billing</NavLink>
-              <NavLink to="/services/healthcare-data-analytics" className={navLinkClass} onClick={() => setOpen(false)}>Healthcare Data Analytics</NavLink>
+              <NavLink to="/services/prescriptions" className={navLinkClass} onClick={() => setOpen(false)}>Prescriptions</NavLink>
+              <NavLink to="/services/immunizations" className={navLinkClass} onClick={() => setOpen(false)}>Immunizations</NavLink>
+              <NavLink to="/services/clinical-services" className={navLinkClass} onClick={() => setOpen(false)}>Clinical Services</NavLink>
+              <NavLink to="/services/specialty-services" className={navLinkClass} onClick={() => setOpen(false)}>Specialty Services</NavLink>
             </div>
-            <NavLink to="/resources" className={navLinkClass} onClick={() => setOpen(false)}>Resources</NavLink>
+            <NavLink to="/health-resources" className={navLinkClass} onClick={() => setOpen(false)}>Health Tips</NavLink>
             <NavLink to="/contact" className={navLinkClass} onClick={() => setOpen(false)}>Contact</NavLink>
           </div>
         </div>
@@ -64,5 +62,3 @@ export default function Header() {
     </header>
   )
 }
-
-

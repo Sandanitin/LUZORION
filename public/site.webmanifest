@@ -1,17 +1,17 @@
 {
-  "name": "LUZORION",
-  "short_name": "LUZORION",
+  "name": "Hillside Dhaka Pharmacy",
+  "short_name": "Dhaka Pharmacy",
+  "description": "Your Local Pharmacy in Jamaica, NY - Prescriptions, Immunizations & Health Services",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0ea5e9",
+  "theme_color": "#2D8659",
   "icons": [
     {
       "src": "/images/logo.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
-
-

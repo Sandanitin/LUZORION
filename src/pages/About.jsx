@@ -1,214 +1,167 @@
-import React from "react";
-import SEO from "@/components/SEO";
-import { FaShieldAlt, FaUserMd, FaClipboardCheck } from "react-icons/fa";
+import React from 'react'
+import SEO from '@/components/SEO'
+import { Link } from 'react-router-dom'
 
 export default function About() {
   return (
     <>
       <SEO
-        title="About LUZORION — Healthcare Documentation & Medical Services"
-        description="Learn about LUZORION, a leading provider of medical scribing, coding, and billing services. LUZORION helps healthcare practices streamline documentation and revenue cycle with secure, reliable services."
-        keywords="LUZORION, healthcare documentation, medical scribing company, medical coding services, healthcare IT solutions, HIPAA compliant services, revenue cycle management"
+        title="About Us — Hillside Dhaka Pharmacy"
+        description="Learn about Hillside Dhaka Pharmacy, your trusted community pharmacy serving Jamaica, NY. Family-owned, personalized care, and commitment to health."
+        keywords="about Hillside Dhaka Pharmacy, Jamaica NY pharmacy, community pharmacy, Bengali pharmacy"
       />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[color:var(--primary)] to-[color:var(--accent)] text-white overflow-hidden py-20">
-        <div className="section relative z-10">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-slate-50 via-white to-slate-100">
+        <div className="section py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-              About Us
+            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
+              About <span className="bg-gradient-to-r from-[color:var(--primary)] to-[color:var(--accent)] bg-clip-text text-transparent">Us</span>
             </h1>
-       <p className="mt-4 text-lg text-white/90 leading-relaxed transition-all duration-500 hover:text-white hover:scale-[1.01]">
-  <span className="font-medium text-white">Luzorion</span> unites expert clinical scribes, certified medical coders,
-  and billing specialists to streamline documentation and revenue
-  cycle management. We empower physicians and care teams to focus on
-   exceptional patient care
-</p>
-
+            <p className="text-xl text-slate-600 leading-relaxed">
+              Your trusted neighborhood pharmacy, serving the Jamaica community with care and dedication
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="bg-white py-20">
-        <div className="section">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-green-600 to-green-500 text-white mb-6">
-              <svg
-                className="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                ></path>
-              </svg>
+      {/* Our Story */}
+      <section className="bg-white">
+        <div className="section section-y">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Story</h2>
+              <div className="space-y-4 text-slate-600 leading-relaxed">
+                <p>
+                  Hillside Dhaka Pharmacy has been proudly serving the Jamaica, NY community for many years. Located at 17014 Hillside Ave, we are your local, family-owned pharmacy dedicated to providing exceptional pharmaceutical care and personalized service.
+                </p>
+                <p>
+                  As a community pharmacy in the heart of the Bengali neighborhood, we understand the unique healthcare needs of our diverse community. Our multilingual staff is here to assist you in English and Bengali, ensuring clear communication and understanding of your healthcare needs.
+                </p>
+                <p>
+                  We believe in building lasting relationships with our customers. When you walk through our doors, you're not just a prescription number—you're a valued member of our pharmacy family.
+                </p>
+              </div>
             </div>
-            <h2 className="text-3xl font-bold text-[color:var(--primary)] mb-6">
-              Our Mission
-            </h2>
-            <p className="text-xl text-[color:var(--primary)]/80 max-w-3xl mx-auto leading-relaxed">
-              Empower clinicians with reliable documentation and revenue
-              services that reduce burnout, improve cash flow, and elevate the
-              patient experience.
-            </p>
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=1200&auto=format&fit=crop"
+                  alt="Pharmacy interior with friendly staff"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="section">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Our Values */}
+      <section className="bg-gradient-to-br from-slate-50 to-white">
+        <div className="section section-y">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Values</h2>
+            <p className="text-xl text-slate-600">What drives us every day</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { value: "100+", label: "Healthcare clients" },
-              { value: "98%", label: "Accuracy across services" },
-              { value: "24/7", label: "Support coverage" },
-              { value: "3-5x", label: "Faster chart closure" },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              >
-                <p className="text-4xl font-bold text-[color:var(--primary)] mb-2">
-                  {stat.value}
-                </p>
-                <p className="text-[color:var(--primary)]/80">{stat.label}</p>
+              {
+                icon: '❤️',
+                title: 'Compassionate Care',
+                description: 'We treat every customer with kindness, respect, and genuine concern for their health and well-being.'
+              },
+              {
+                icon: '🎯',
+                title: 'Excellence',
+                description: 'We maintain the highest standards in pharmaceutical care, ensuring accuracy and quality in everything we do.'
+              },
+              {
+                icon: '🤝',
+                title: 'Community Focus',
+                description: 'We\'re committed to serving our neighborhood and building strong relationships with our customers.'
+              },
+              {
+                icon: '💡',
+                title: 'Expert Guidance',
+                description: 'Our licensed pharmacists provide knowledgeable advice and answer all your medication questions.'
+              },
+              {
+                icon: '⏰',
+                title: 'Convenience',
+                description: 'Fast service, free delivery, and flexible hours to fit your busy lifestyle.'
+              },
+              {
+                icon: '🌟',
+                title: 'Trust',
+                description: 'We earn your trust through consistent, reliable service and transparent communication.'
+              }
+            ].map((value, i) => (
+              <div key={i} className="p-8 bg-white rounded-2xl border border-slate-200 hover:shadow-lg transition-shadow duration-300">
+                <div className="text-4xl mb-4">{value.icon}</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{value.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What Sets Us Apart */}
-      <section className="py-20 bg-white">
-        <div className="section">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold text-[color:var(--primary)] mb-6">
-              What Sets Us Apart
-            </h2>
-            <p className="text-xl text-[color:var(--primary)]/80">
-              We're committed to delivering exceptional service with a focus on
-              quality and security.
+      {/* Why Choose Us */}
+      <section className="bg-white">
+        <div className="section section-y">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Choose Hillside Dhaka Pharmacy?</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              We go above and beyond to ensure you receive the best pharmaceutical care
             </p>
           </div>
-          {/* Leadership / Who We Are */}
-          <div className="max-w-5xl mx-auto mb-16">
-  <div className="text-center mb-12">
-    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-      Who We Are
-    </h3>
-    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-      Meet our leadership team dedicated to excellence and innovation
-    </p>
-  </div>
-  
-  <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    <li className="group p-8 rounded-xl bg-white shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-100">
-      <div className="flex flex-col text-center">
-        <div className="mb-6 pb-6 border-b border-gray-100">
-          <p className="font-bold text-xl text-gray-900 mb-2">
-            Thammi Babu Chattu
-          </p>
-          <p className="text-blue-600 font-medium mb-2">CPC, CCS</p>
-          <p className="text-gray-600">CEO and Founder</p>
-        </div>
-        <div className="flex space-x-3 justify-center">
-          <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-            <i className="fab fa-linkedin-in text-sm"></i>
-          </button>
-          <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-            <i className="far fa-envelope text-sm"></i>
-          </button>
-        </div>
-      </div>
-    </li>
-    
-    <li className="group p-8 rounded-xl bg-white shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-100">
-      <div className="flex flex-col text-center">
-        <div className="mb-6 pb-6 border-b border-gray-100">
-          <p className="font-bold text-xl text-gray-900 mb-2">
-            Anil Thippireddy
-          </p>
-          <p className="text-blue-600 font-medium mb-2">CPC</p>
-          <p className="text-gray-600">Co-founder and Coding Manager</p>
-        </div>
-        <div className="flex space-x-3 justify-center">
-          <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-            <i className="fab fa-linkedin-in text-sm"></i>
-          </button>
-          <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-            <i className="far fa-envelope text-sm"></i>
-          </button>
-        </div>
-      </div>
-    </li>
-    
-    <li className="group p-8 rounded-xl bg-white shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-100">
-      <div className="flex flex-col text-center">
-        <div className="mb-6 pb-6 border-b border-gray-100">
-          <p className="font-bold text-xl text-gray-900 mb-2">
-            Burlakunta Kiran Kumar
-          </p>
-          <p className="text-blue-600 font-medium mb-2">Director</p>
-          <p className="text-gray-600">Director Of Client Services</p>
-        </div>
-        <div className="flex space-x-3 justify-center">
-          <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-            <i className="fab fa-linkedin-in text-sm"></i>
-          </button>
-          <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-            <i className="far fa-envelope text-sm"></i>
-          </button>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
-              {
-                icon: <FaShieldAlt className="w-8 h-8" />,
-                title: "Security-First Operations",
-                description:
-                  "HIPAA safeguards and audited processes ensure your data is always protected.",
-              },
-              {
-                icon: <FaUserMd className="w-8 h-8" />,
-                title: "Clinically Fluent Teams",
-                description:
-                  "Our specialists are trained on your EHR workflows for seamless integration.",
-              },
-              {
-                icon: <FaClipboardCheck className="w-8 h-8" />,
-                title: "Proactive Communication",
-                description:
-                  "Clear SLAs and continuous QA ensure consistent, high-quality service.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group p-8 bg-white rounded-xl border border-gray-100 hover:border-green-200 transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center text-green-600 mb-6 group-hover:bg-green-100 transition-colors duration-300">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-[color:var(--primary)] mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-[color:var(--primary)]/80 leading-relaxed">
-                  {item.description}
-                </p>
+              '✓ Serving the neighborhood for many years',
+              '✓ Competitive discounts available',
+              '✓ Free home delivery every day',
+              '✓ Hassle-free prescription transfers',
+              '✓ We accept most insurances',
+              '✓ Fast prescription filling (10-15 minutes)',
+              '✓ Walk-ins welcome, no appointment needed',
+              '✓ Multilingual staff (English & Bengali)',
+              '✓ Medication synchronization services',
+              '✓ Immunizations available on-site',
+              '✓ Free medication consultations',
+              '✓ Personalized care and attention'
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 p-4 bg-gradient-to-r from-slate-50 to-white rounded-lg border border-slate-200">
+                <div className="text-2xl text-[color:var(--primary)]">✓</div>
+                <span className="text-slate-700 font-medium">{item.replace('✓ ', '')}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div className="section py-16 text-center">
+          <h2 className="text-3xl font-bold mb-4">Visit Us Today</h2>
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            Experience the difference of personalized pharmacy care
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[color:var(--primary)] to-[color:var(--accent)] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
+            >
+              Contact Us
+            </Link>
+            <a
+              href="tel:7185262300"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-200"
+            >
+              📞 718-526-2300
+            </a>
           </div>
         </div>
       </section>
     </>
-  );
+  )
 }
